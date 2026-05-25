@@ -1,12 +1,16 @@
 # /// script
 # requires-python = ">=3.14"
-# dependencies = []
+# dependencies = [
+#     "seedir>=0.5.1",
+# ]
 # ///
 import shutil
 import sys
 import tarfile
 import tempfile
 from urllib.request import urlopen
+
+import seedir as sd
 
 
 def main() -> None:
@@ -26,6 +30,8 @@ def main() -> None:
             tar.extractall(dest_dir, filter="data")
 
     print("success download:", dest_dir)
+    print("the dir tree:")
+    sd.seedir(dest_dir, exclude_files=[r".*\.pdf$", r".*\.png$"], regex=True)
 
 
 if __name__ == "__main__":
