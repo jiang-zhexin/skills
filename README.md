@@ -2,6 +2,10 @@
 
 自用的 skills 集合，可通过 `skills` CLI 一键安装。
 
+## 前置条件
+
+本 skills 统一用 Python 封装 scripts（符合 PEP 723 规范），请确保已安装 [uv](https://docs.astral.sh/uv/)，Agent 将用 `uv run` 调用。
+
 ## 安装
 
 ```bash
