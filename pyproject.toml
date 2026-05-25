@@ -1,0 +1,7 @@
+[project]
+name = "skills"
+version = "1.0.0"
+description = "jiang-zhexin's skills"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
